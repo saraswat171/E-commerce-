@@ -1,6 +1,6 @@
 .nav{
     display: flex;
-   width: max-content;
+   width: fit-content;
 padding: 30px 72px;
 align-items: flex-start;
 gap: 129px;          /* 129px*/
