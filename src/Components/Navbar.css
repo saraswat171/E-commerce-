@@ -3,18 +3,18 @@
    width: fit-content;
 padding: 30px 72px;
 align-items: flex-start;
-gap: 129px;
+gap: 240px;          /* 129px*/
 }
 .logo{
     display: flex;
 align-items: center;
-gap: 8px;
+gap: 28px;   /* 8px*/
 }
 .logo h1{
     color: var(--Primary-Primary, #282828);
 text-align: center;
 font-family: "Prosto One";
-font-size: 20px;
+font-size: 40px;   /* 20px*/
 font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 100% */
@@ -28,21 +28,21 @@ img{
     display: flex;
 padding: 4px 8px;
 align-items: flex-start;
-gap: 8px;
+gap: 68px;    /* 8px*/
 }
 .navlink{
     display: flex;
 padding: 10px 12px;
 justify-content: center;
 align-items: center;
-gap: 8px;
+gap: 58px;    /* 8px*/
 text-decoration: none;
 }
 .searchbar{
     display: flex;
     padding: 12px 10px;
     align-items: flex-start;
-    gap: 38px;
+    gap: 48px;   /* 38px*/
 }
 .btn{
    border: none;
@@ -51,6 +51,6 @@ text-decoration: none;
    cursor: pointer;
 }
  .btn img{
-    width: 24px;
-height: 24px;
+    width: 34px;
+height: 34px;
  }
