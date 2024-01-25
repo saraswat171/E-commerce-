@@ -1,8 +1,12 @@
 import React from 'react'
+import Card from '../Components/Card/Card'
 
 function TeaCollections() {
   return (
-    <div>TeaCollections</div>
+    
+      <Card/>
+      
+    
   )
 }
 

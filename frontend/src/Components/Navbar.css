@@ -1,9 +1,12 @@
 .nav{
     display: flex;
-   width: fit-content;
-padding: 30px 72px;
+   /* width: fit-content; */
+/* padding: 30px 72px; */
+padding-top: 30px;
+padding-bottom: 30px;
 align-items: flex-start;
-gap: 129px;          /* 129px*/
+/* gap: 129px;          */
+justify-content: space-around;
 }
 .logo{
     display: flex;
