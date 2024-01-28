@@ -16,8 +16,11 @@ function Login() {
         try {
             const response = await axios.post('http://localhost:8080/logininfo', data);
             console.log("res", response);
-            if (response.data === "success") {
+            if (response.data === "Admin") {
                 console.log(response.data)
+                navigate('/Dashboard');
+            }
+            else if(response.data === "User"){
                 navigate('/');
             }
             else {

@@ -5,12 +5,13 @@ import mailicon from '../../Assets/icons/Leading Icon.svg'
 import passicon from '../../Assets/icons/password-icon.svg'
 import nameimg from '../../Assets/icons/NAMEIMG.png'
 import axios from 'axios'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [role, setRole] = useState('');
     const [errorMessage, setErrorMessage] = useState("")
     const navigate = useNavigate()
 
@@ -36,8 +37,11 @@ function Register() {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = { name, email, password };
-        if(setErrorMessage === "Password is strong!"){
+        console.log(role)
+        const data = { name, email, password, role };
+        
+          
+        if (errorMessage === "Password is strong!") {
             try {
                 const response = await axios.post('http://localhost:8080/usersinfo', data);
                 console.log("res", response);
@@ -45,20 +49,20 @@ function Register() {
                     console.log(response.data)
                     navigate('/Login');
                 }
-               
+
             }
             catch (error) {
                 alert(error)
                 console.error('Error:', error);
-    
+
             }
-    
+
         }
         else {
             alert("Password is not strong");
         }
 
-       
+
     }
 
     return (
@@ -95,6 +99,21 @@ function Register() {
                             </div>
                         </div>
                     </div>
+                    <div className='hero-input'>
+                        <div className='email-content'>
+                            <div className='mailbox'>
+                                <label>
+                                    SignUp As:
+                                    <select name="selectedRole"  onChange={(e) => setRole(e.target.value)}>
+                                        <option value="User">User</option>
+                                        <option value="Admin">Admin</option>
+                                       
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                     <button className='signin' type='submit'>SIGN UP</button>

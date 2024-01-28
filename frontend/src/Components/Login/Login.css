@@ -17,7 +17,7 @@ a {
     display: flex;
     width: 552px;
     /*552px*/
-    height: 455px;
+    /* height: 455px; */
     /*455px*/
     padding: 18px;
     flex-direction: column;

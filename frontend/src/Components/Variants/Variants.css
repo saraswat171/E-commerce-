@@ -1,0 +1,45 @@
+.vari{
+    display: flex;
+padding: 10px 4px;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+background-color: white;
+}
+.varit{
+    display: flex;
+padding: 10px 0px;
+align-items: center;
+gap: 14px;
+}
+.variimg{
+    width: 33px;
+height: 53px;
+flex-shrink: 0;
+stroke-width: 1px;
+stroke: var(--Primary-Primary, #282828);
+}
+.varitxt{
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: var(--Primary-Primary, #282828);
+text-align: center;
+font-family: Montserrat;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.varitext{
+    color: var(--Primary-Primary, #282828);
+text-align: center;
+
+/* Body/Medium */
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.25px;
+}

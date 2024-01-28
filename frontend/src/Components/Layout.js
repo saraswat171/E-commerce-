@@ -7,6 +7,7 @@ import Blog from '../Pages/Blog';
 import Contact from '../Pages/Contact';
 import Register from './register/Register.js'
 import Login from './Login/Login.js';
+import AddtoCart from '../Pages/AddtoCart/AddtoCart.js';
 
 
 function Layout() {
@@ -20,6 +21,7 @@ function Layout() {
     <Route path='/Contact' Component={Contact} />
     <Route path='/Login' Component={Login} />
     <Route path='/Register' Component={Register} />
+    <Route path='/AddtoCart' Component={AddtoCart} />
    </Routes>
    </Router>
   )

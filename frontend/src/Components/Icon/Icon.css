@@ -1,0 +1,25 @@
+.icondiv{
+    display: flex;
+align-items: flex-start;
+gap: 61px;
+}
+.iconcom{
+    display: flex;
+align-items: center;
+gap: 8px;
+}
+.iconimg{
+    width: 24px;
+height: 24px;
+}
+.icontitle{
+    color: var(--Primary-Primary, #282828);
+
+/* Title/Medium */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.15px;
+}
