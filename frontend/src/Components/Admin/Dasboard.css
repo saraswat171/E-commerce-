@@ -32,6 +32,10 @@ gap: 8px;
 background: var(--Primary-Primary, #282828);
 } */
 .dashboard{
+  display: flex;
+  gap: 30px;
+}
+.dashboard-right{
     background: var(--Background-Variant-1, #F4F4F4);
     display: flex;
     width: 552px;
@@ -44,4 +48,9 @@ background: var(--Primary-Primary, #282828);
     align-items: center;
     gap: 18px;
     flex-shrink: 0;
+}
+.dashboard-left{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }

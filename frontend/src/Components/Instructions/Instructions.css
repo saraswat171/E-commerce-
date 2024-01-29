@@ -1,0 +1,143 @@
+.instruct {
+    display: flex;
+
+    padding: 40px 80px 40px 120px;
+    align-items: flex-end;
+    gap: 160px;
+    background: var(--Background-Variant-1, #F4F4F4);
+}
+
+.instruct-right {
+
+    width: 344px;
+    height: 249px;
+
+    flex-shrink: 0;
+}
+
+.instruct-right-heading {
+    color: var(--Primary-Primary, #282828);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 31px;
+    /* 87.5% */
+}
+
+.instruct-iconcom {
+    display: inline-flex;
+    padding: 8px 0px;
+    align-items: center;
+    gap: 8px;
+}
+
+.instruct-iconimg {
+    width: 24px;
+    height: 24px;
+}
+
+.instruct-icontitle {
+    color: var(--Primary-Primary, #000);
+
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+}
+
+#instruct-icondescription {
+    color: var(--Primary-Primary, #000);
+
+    /* Body/Medium */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-transform: none;
+}
+
+.line {
+    width: 264px;
+    height: 1px;
+    background: #A0A0A0;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+.instruct-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.instruct-left-heading {
+    color: var(--Primary-Primary, #282828);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+
+    /* 87.5% */
+}
+
+.teadiv {
+    display: flex;
+    padding: 5px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.instruct-leftteadiv {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.linev {
+    width: 1px;
+    height: 70px;
+    background: #A0A0A0;
+}
+
+.ingredient {
+    color: var(--Primary-Primary, #282828);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 87.5% */
+}
+
+.ingredientpara {
+    color: var(--Primary-Primary, #282828);
+    width: 519px;
+    height: 48px;
+    /* Body/Medium */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: 0.25px;
+}

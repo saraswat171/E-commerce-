@@ -6,6 +6,7 @@
     width: 264px;
     height: 364px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .card h1{

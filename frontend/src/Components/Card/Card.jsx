@@ -12,6 +12,7 @@ function Card({ name, description, price, image }) {
       title: name,
       price: price,
       quantity: '50 g',
+      description :description,
     };
 
     navigate('/AddtoCart', { state: { productInfo } });
@@ -20,7 +21,8 @@ function Card({ name, description, price, image }) {
     <div className='card' onClick={handleCardClick }>
         <img src={image} alt='tea1'></img>
         <h1>{name}</h1>
-        <h2>€ {price} <span id='para'>/ 50 g</span></h2>
+        
+        <h2> € {price} <span id='para'>/ 50 g</span></h2>
     </div>
   )
 }

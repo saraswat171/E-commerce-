@@ -6,6 +6,7 @@ import mall from '../../Assets/icons/local_mall1.svg'
 import add from '../../Assets/icons/Add.jpg'
 import sub from '../../Assets/icons/minus.jpg'
 import Variants from '../../Components/Variants/Variants';
+import Instructions from '../../Components/Instructions/Instructions';
 function AddtoCart() {
   const location = useLocation();
   const [counter, setCounter] = useState(1);
@@ -17,41 +18,54 @@ function AddtoCart() {
   }
 
   return (
-    <div className='addcart' >
-  
-      <h1 className='uppercase' >HOME/COLLECTIONS/CHAI/{productInfo.title}</h1>
-      <div className='carditem'>
-        <img src={productInfo.imgSrc} alt='product'></img>
-        <div className='card-right'>
-          <h1 className='card-right-heading'>{productInfo.title}</h1>
-          <p className='paro'>A lovely warming Chai tea with ginger cinnamon flavours.
-          </p>
-          <Icon />
-          <h1 className='price'>  {productInfo.price}</h1>
-          <div className='variant'>
-            <h1 className='variant-head'>Variants</h1>
-            <Variants />
-            <div className='lastcart'>
-              <div className='counter'>
+    <div className='addtocart'>
+      <div className='addcart' >
 
-                <img className='counterbtn' src={add} alt='gff' onClick={() => setCounter(counter + 1)}></img>
-                <h1 className='countertxt'>{counter}</h1>
-                <img className={`counterbtn ${counter === 1 ? 'disabled' : ''}`} src={sub} alt='gff'
-                  onClick={() => {
+        <h1 className='uppercase' >HOME/COLLECTIONS/CHAI/{productInfo.title}</h1>
+        <div className='carditem'>
+          <img src={productInfo.imgSrc} alt='product'></img>
+          <div className='card-right'>
+            <h1 className='card-right-heading'>{productInfo.title}</h1>
+            <p className='paro'>{productInfo.description}
+            </p>
+            <Icon />
+            <h1 className='price'> € {productInfo.price}</h1>
+            <div className='variant'>
+              <h1 className='variant-head'>Variants</h1>
+              <Variants />
+              <div className='lastcart'>
+                <div className='counter'>
 
-                    if (counter > 1) {
-                      setCounter(counter - 1);
-                    }
-                  }}></img>
+                  <img className='counterbtn' src={add} alt='gff' onClick={() => setCounter(counter + 1)}></img>
+                  <h1 className='countertxt'>{counter}</h1>
+                  <img className={`counterbtn ${counter === 1 ? 'disabled' : ''}`} src={sub} alt='gff'
+                    onClick={() => {
+
+                      if (counter > 1) {
+                        setCounter(counter - 1);
+                      }
+                    }}></img>
+                </div>
+                <button className='addbag'>
+                  <img className='addbagimg' src={mall} alt='hh'></img>
+                  <h1 className='addbagh1'>Add To Bag</h1>
+                </button>
               </div>
-              <button className='addbag'>
-                <img className='addbagimg' src={mall} alt='hh'></img>
-                <h1 className='addbagh1'>Add To Bag</h1>
-              </button>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+
+        <Instructions />
+       
+          <div className='like'>
+             <h1 className='like-head' >You may also like</h1>
+
+             <div className='like-content'>
+
+             </div>
+          </div>
+     
     </div>
   )
 }

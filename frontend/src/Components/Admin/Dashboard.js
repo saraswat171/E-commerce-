@@ -20,7 +20,7 @@ const Dashboard = () => {
     };
 
     const handleFormSubmit = async (event) => {
-        event.preventDefault();
+        // event.preventDefault();
 
         const formData = new FormData();
         formData.append('name', productData.name);
@@ -66,14 +66,14 @@ const Dashboard = () => {
     }, []);
 
     return (
-        <div>
-            <div className='dashboard'>
-            <div className='hero-head'>
+        <div className='dashboard'>
+            <div className='dashboard-right'>
+            <div className='hero-head new'>
                 <h1>Adding the Product</h1>
             </div>
-            <form onSubmit={handleFormSubmit}>
-                {/* Input fields for product data */}
-                <div className='hero-input'>
+            <form onSubmit={handleFormSubmit} enctype="multipart/form-data">
+              
+                <div className='hero-input new'>
                     <div className='email-content'>
                         <div className='mailbox'>
                             <input
@@ -130,7 +130,7 @@ const Dashboard = () => {
                     <div className='email-content'>
                         <div className='mailbox'>
                             <label >Product Image:</label>
-                            <input type="file" accept="image/*" onChange={handleFileChange} />
+                            <input type="file" accept="image/*" name="image" onChange={handleFileChange} />
 
                         </div>
                     </div>
@@ -138,15 +138,18 @@ const Dashboard = () => {
                 <button className='submitbtn' type="submit">Add Product</button>
             </form>
         </div>
-        {products.map((product) => (
+     <div className='dashboard-left'>
+     {products.map((product) => ( 
         <Admincard
           key={product._id}
           name={product.name}
           // description={product.description}
           price={product.price}
-          image={`data:image/jpeg;base64,${product.image}`}
+          stock={product.stock}
+          image={`http://localhost:8080/${product.image}`}
         />
       ))}
+     </div>
         </div>
     );
 };

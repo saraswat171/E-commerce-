@@ -11,7 +11,7 @@ function Register() {
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const [role, setRole] = useState('');
+    const [role, setRole] = useState('User');
     const [errorMessage, setErrorMessage] = useState("")
     const navigate = useNavigate()
 
@@ -104,7 +104,11 @@ function Register() {
                             <div className='mailbox'>
                                 <label>
                                     SignUp As:
-                                    <select name="selectedRole"  onChange={(e) => setRole(e.target.value)}>
+                                    <select name="selectedRole"  onChange={(e) => {
+                                        setRole(e.target.value);
+                                        console.log(role);
+                                    }
+                                    }>
                                         <option value="User">User</option>
                                         <option value="Admin">Admin</option>
                                        

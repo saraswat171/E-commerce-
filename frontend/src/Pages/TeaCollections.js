@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Card from '../Components/Card/Card'
+import './TeaCollections.css'
 
 const TeaCollection = () => {
   const [products, setProducts] = useState([]);
@@ -26,14 +27,14 @@ const TeaCollection = () => {
   }, []);
 
   return (
-    <div>
+    <div className='teacollections'>
       {products.map((product) => (
         <Card
           key={product._id}
           name={product.name}
-          // description={product.description}
+           description={product.description}
           price={product.price}
-          image={`data:image/jpeg;base64,${product.image}`}
+          image={`http://localhost:8080/${product.image}`}
         />
       ))}
     </div>

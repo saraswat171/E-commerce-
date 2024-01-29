@@ -5,17 +5,19 @@ const UsersModel = require('./models/Users')
 const multer = require('multer');
 const ProductModel = require('./models/Products')
 
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
-
+//  const storage = multer.uploads();
 const app = express()
 app.use(express.text())
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json()); 
 app.use(cors())
+app.use('/uploads' , express.static('uploads'))
+const upload = multer({ dest: './uploads' })
+
+
 
 try {
-    mongoose.connect("mongodb+srv://chetanchetan2831:Chetan1414@cluster0.rz8xu63.mongodb.net/users");
+    mongoose.connect("mongodb+srv://chetan1150:Ez9bVfwafkBCcG8x@cluster0.hzawyqo.mongodb.net/?retryWrites=true&w=majority");
     console.log("connected to mongodb")
 }
 catch (error) {
@@ -66,7 +68,7 @@ app.post('/logininfo', async (req, res) => {
 app.post('/products', upload.single('image'), async (req, res) => {
     try {
       const { name, description, stock, price } = req.body;
-      const image = req.file.buffer; // Assuming the image is uploaded as a file
+      const image = req.file.path; // Assuming the image is uploaded as a file
   
       // Store the product in the database (MongoDB)
       const newProduct = new ProductModel({

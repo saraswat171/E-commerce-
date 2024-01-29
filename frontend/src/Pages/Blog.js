@@ -1,10 +1,11 @@
 import React from 'react'
-import Dashboard from '../Components/Admin/Dashboard'
+import Instructions from '../Components/Instructions/Instructions'
+// import Dashboard from '../Components/Admin/Dashboard'
 
 function Blog() {
   return (
     <div>
-      <Dashboard/>
+     <Instructions/>
     </div>
   )
 }
