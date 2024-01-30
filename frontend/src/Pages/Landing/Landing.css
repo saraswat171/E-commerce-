@@ -1,0 +1,26 @@
+.landing-page{
+    display: inline-flex;
+align-items: center;
+gap: 120px;
+}
+.landing-img{
+    width: 628px;
+height: 628px;
+}
+.landing-right{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+}
+
+.landing-right-head{
+    color: var(--Primary-Primary, #282828);
+
+/* Display/Small */
+font-family: "Prosto One";
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 44px; /* 122.222% */
+}

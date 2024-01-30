@@ -1,3 +1,11 @@
 .register{
     padding: 30px 30px 30px 76px;
+    display: flex;
+    justify-content: space-around;
+}
+.img-right{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 0;
 }

@@ -4,6 +4,7 @@ import '../Login/Login.css'
 import mailicon from '../../Assets/icons/Leading Icon.svg'
 import passicon from '../../Assets/icons/password-icon.svg'
 import nameimg from '../../Assets/icons/NAMEIMG.png'
+// import landingimage from '../../Assets/images/Landing Main Image.jpg'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -123,6 +124,17 @@ function Register() {
                     <button className='signin' type='submit'>SIGN UP</button>
                 </div>
             </form>
+            <div className='img-right'>
+            {/* <img className='landing-img' src={landingimage} alt='' ></img> */}
+            <div className='hero-b'>
+                    <div className='heading'>
+                        <h1>Guest checkout</h1>
+                        <p>No ready to become a customer?</p>
+                    </div>
+                    <button className='create-btn'>CHECKOUT AS A GUEST</button>
+                </div>
+            </div>
+           
         </div>
     )
 }

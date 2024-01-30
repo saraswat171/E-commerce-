@@ -14,10 +14,10 @@ app.use(cors())
 app.use('/uploads' , express.static('uploads'))
 const upload = multer({ dest: './uploads' })
 
-
+const url = "mongodb+srv://chetan1150:Ez9bVfwafkBCcG8x@cluster0.hzawyqo.mongodb.net/?retryWrites=true&w=majority"
 
 try {
-    mongoose.connect("mongodb+srv://chetan1150:Ez9bVfwafkBCcG8x@cluster0.hzawyqo.mongodb.net/?retryWrites=true&w=majority");
+    mongoose.connect(url);
     console.log("connected to mongodb")
 }
 catch (error) {

@@ -9,6 +9,7 @@ import Register from './register/Register.js'
 import Login from './Login/Login.js';
 import AddtoCart from '../Pages/AddtoCart/AddtoCart.js';
 import Dashboard from './Admin/Dashboard.js';
+import Landing from '../Pages/Landing/Landing.js';
 
 
 function Layout() {
@@ -16,6 +17,7 @@ function Layout() {
    <Router>
     <Navbar/>
    <Routes>
+    <Route path='/' Component={Landing} />
    <Route path='/TeaCollections' Component={TeaCollections} />
     <Route path='/Accessories' Component={Accessories} />
     <Route path='/Blog' Component={Blog} />

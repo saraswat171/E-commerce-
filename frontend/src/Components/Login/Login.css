@@ -199,7 +199,7 @@ a {
 
     width: 426px;
     /*456px*/
-    height: 351px;
+    /* height: 351px; */
     /*381px*/
     flex-shrink: 0;
     background: var(--Background-Variant-1, #F4F4F4);
