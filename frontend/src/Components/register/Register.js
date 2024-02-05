@@ -44,7 +44,7 @@ function Register() {
           
         if (errorMessage === "Password is strong!") {
             try {
-                const response = await axios.post('http://localhost:8080/usersinfo', data);
+                const response = await axios.post('http://localhost:6080/usersinfo', data);
                 console.log("res", response);
                 if (response.status === 200) {
                     console.log(response.data)

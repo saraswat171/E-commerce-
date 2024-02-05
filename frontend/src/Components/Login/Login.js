@@ -9,19 +9,20 @@ function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const navigate = useNavigate()
+    axios.defaults.withCredentials=true;
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = { email, password };
 
         try {
-            const response = await axios.post('http://localhost:8080/logininfo', data);
+            const response = await axios.post('http://localhost:6080/logininfo', data);
             console.log("res", response);
             if (response.data === "Admin") {
                 console.log(response.data)
                 navigate('/Dashboard');
             }
             else if(response.data === "User"){
-                navigate('/');
+                navigate('/TeaCollections');
             }
             else {
                 alert(response.data)
@@ -110,3 +111,8 @@ function Login() {
 }
 
 export default Login;
+
+
+
+
+

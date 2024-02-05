@@ -30,7 +30,7 @@ const Dashboard = () => {
         formData.append('image', productData.image);
 
         try {
-            const response = await fetch('http://localhost:8080/products', {
+            const response = await fetch('http://localhost:6080/products', {
                 method: 'POST',
                 body: formData,
             });
@@ -49,7 +49,7 @@ const Dashboard = () => {
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const response = await fetch('http://localhost:8080/products');
+          const response = await fetch('http://localhost:6080/products');
           
           if (response.ok) {
             const data = await response.json();
@@ -146,7 +146,7 @@ const Dashboard = () => {
           // description={product.description}
           price={product.price}
           stock={product.stock}
-          image={`http://localhost:8080/${product.image}`}
+          image={`http://localhost:6080/${product.image}`}
         />
       ))}
      </div>

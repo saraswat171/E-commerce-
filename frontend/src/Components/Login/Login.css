@@ -9,6 +9,7 @@ a {
     padding-bottom: 76px;
     display: flex;
     gap: 120px;
+   justify-content: center;
     /*120px*/
 }
 
