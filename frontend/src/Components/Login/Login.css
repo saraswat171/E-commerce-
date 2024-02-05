@@ -91,6 +91,7 @@ a {
     padding: 0px 12px;
     align-items: center;
     gap: 16px;
+    width: 100%;
 }
 
 .mailbox img {
@@ -110,6 +111,7 @@ a {
     /* 150% */
     letter-spacing: 0.5px;
     border: none;
+    width: 100%;
 }
 
 .forget {

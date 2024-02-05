@@ -51,6 +51,25 @@ background: var(--Primary-Primary, #282828);
 }
 .dashboard-left{
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    flex-wrap: wrap;
+    
 }
+
+table {
+    margin: 10px;
+    padding: 10px;
+   
+    border-collapse: collapse;
+    
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+   
+  }
+  .tableimg{
+    height: 48px;
+    width: 48px;
+  }

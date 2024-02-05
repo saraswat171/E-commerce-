@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import './Login.css'
 import mailicon from '../../Assets/icons/Leading Icon.svg'
 import passicon from '../../Assets/icons/password-icon.svg'
@@ -8,6 +8,7 @@ import axios from 'axios'
 function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    // const [role , setRole]=useState('null');
     const navigate = useNavigate()
     axios.defaults.withCredentials=true;
     const handleSubmit = async (e) => {
@@ -17,12 +18,15 @@ function Login() {
         try {
             const response = await axios.post('http://localhost:6080/logininfo', data);
             console.log("res", response);
+
+            localStorage.setItem('User role' , response.data);
+           
             if (response.data === "Admin") {
                 console.log(response.data)
                 navigate('/Dashboard');
             }
             else if(response.data === "User"){
-                navigate('/TeaCollections');
+                navigate('/');
             }
             else {
                 alert(response.data)
@@ -34,6 +38,10 @@ function Login() {
         }
 
     }
+ 
+    // useEffect(()=>{
+
+    // },[role]);
     return (
         <div className='hero'>
             <form onSubmit={handleSubmit}>
